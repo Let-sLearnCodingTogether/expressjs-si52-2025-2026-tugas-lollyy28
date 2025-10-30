@@ -9,7 +9,7 @@ export const protect = (req, res, next) => {
         (err, user, info) => {
             if (err || !user) {
                 return res.status(401).json ({
-                    message : info ? info.message : "Unauthotized",
+                    message : info ? info.message : "Unauthorized",
                     err : err || "Tidak valid",
             });
         }
